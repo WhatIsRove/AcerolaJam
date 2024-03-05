@@ -14,18 +14,13 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     Vector3 moveDir;
 
-    GameObject camera;
+    Animator anim;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        camera = Camera.main.gameObject;
-    }
-
-    void Update()
-    {
-        
+        anim = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -59,5 +54,12 @@ public class PlayerController : MonoBehaviour
     {
         var temp = input.Get<Vector2>();
         moveDir = new Vector3(temp.x, 0, temp.y);
+
+        if (moveDir.magnitude > 0)
+        {
+            anim.SetFloat("moveX", moveDir.x);
+            anim.SetFloat("moveY", moveDir.z);
+        }
+        
     }
 }
