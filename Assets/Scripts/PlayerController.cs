@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,13 +16,24 @@ public class PlayerController : MonoBehaviour
     Rigidbody rb;
     Vector3 moveDir;
 
-    Animator anim;
+    public Animator anim;
+
+    public LayerMask groundLayer;
+    public Transform groundPoint;
+    RaycastHit screenHit;
+    bool rayHit;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
 
-        anim = GetComponent<Animator>();
+
+        
+    }
+
+    private void Update()
+    {
+        
     }
 
     private void FixedUpdate()
@@ -48,6 +61,24 @@ public class PlayerController : MonoBehaviour
             localVelocity.z /= decelRate;
             rb.velocity = localVelocity;
         }
+
+        float dotForward = 0;
+
+        if (rb.velocity.magnitude > 0.5)
+        {
+            dotForward = Vector3.Dot(rb.velocity.normalized, transform.forward.normalized);
+        }
+        
+        anim.SetFloat("zVel", dotForward);
+    }
+
+    private void LateUpdate()
+    {
+        if (rayHit)
+        {
+            var dir = screenHit.point - groundPoint.position;
+            transform.forward = dir;
+        }
     }
 
     void OnMove(InputValue input)
@@ -55,11 +86,20 @@ public class PlayerController : MonoBehaviour
         var temp = input.Get<Vector2>();
         moveDir = new Vector3(temp.x, 0, temp.y);
 
-        if (moveDir.magnitude > 0)
-        {
-            anim.SetFloat("moveX", moveDir.x);
-            anim.SetFloat("moveY", moveDir.z);
-        }
         
+    }
+
+    void OnLook(InputValue input)
+    {
+        var temp = input.Get<Vector2>();
+        var ray = Camera.main.ScreenPointToRay(new Vector3(temp.x, temp.y, 0));
+
+        if (Physics.Raycast(ray, out screenHit, Mathf.Infinity, groundLayer))
+        {
+            rayHit = true;
+        } else
+        {
+            rayHit = false;
+        }
     }
 }
