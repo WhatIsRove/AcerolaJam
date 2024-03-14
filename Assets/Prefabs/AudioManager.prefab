@@ -1,0 +1,267 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &588292671252154111
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5271020686624106841}
+  - component: {fileID: 8488668985403816847}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5271020686624106841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588292671252154111}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8488668985403816847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 588292671252154111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5499ffcb0fd45bf4e8f29e6c6247bd42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: SwordHit0
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordHit1
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordHit2
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordHit3
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordHit4
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordHit5
+    clip: {fileID: 8300000, guid: 548983e31928b1247a5b03b9d35de61b, type: 3}
+    volume: 0.006
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 0.95
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordWoosh0
+    clip: {fileID: 8300000, guid: 2f1aeec57a148784db5631a40a01ea4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordWoosh1
+    clip: {fileID: 8300000, guid: 2f1aeec57a148784db5631a40a01ea4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordWoosh2
+    clip: {fileID: 8300000, guid: 2f1aeec57a148784db5631a40a01ea4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordWoosh3
+    clip: {fileID: 8300000, guid: 2f1aeec57a148784db5631a40a01ea4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordWoosh4
+    clip: {fileID: 8300000, guid: 2f1aeec57a148784db5631a40a01ea4c, type: 3}
+    volume: 0.2
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Music
+    clip: {fileID: 8300000, guid: 906d727d9f862ae41a0ac414f32599ca, type: 3}
+    volume: 0.01
+    pitch: 1
+    rangePitch: 0
+    minPitch: 0.8
+    maxPitch: 1
+    mixer: {fileID: 6264963195427454884, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 1
+    source: {fileID: 0}
+  - name: Dodge
+    clip: {fileID: 8300000, guid: 666234dde271d6b44a7384fff61c52e8, type: 3}
+    volume: 0.18
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch0
+    clip: {fileID: 8300000, guid: 4451654e16e415e4fa46ebd3a53699fd, type: 3}
+    volume: 0.04
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Punch1
+    clip: {fileID: 8300000, guid: 4451654e16e415e4fa46ebd3a53699fd, type: 3}
+    volume: 0.04
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Splatter0
+    clip: {fileID: 8300000, guid: f2596c30022d4ff4980eb75258d1e496, type: 3}
+    volume: 0.02
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Splatter1
+    clip: {fileID: 8300000, guid: f2596c30022d4ff4980eb75258d1e496, type: 3}
+    volume: 0.02
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.95
+    maxPitch: 1.05
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Rewind
+    clip: {fileID: 8300000, guid: cbf50f120d45af24bb5cb1f778d1b554, type: 3}
+    volume: 0.02
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: Power
+    clip: {fileID: 8300000, guid: 417e1e21f86f6f143bd2d68f33ea823d, type: 3}
+    volume: 0.02
+    pitch: 1
+    rangePitch: 1
+    minPitch: 0.85
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: MenuMusic
+    clip: {fileID: 8300000, guid: 919b80b6b22097a4ab9c082af02c46c7, type: 3}
+    volume: 0.01
+    pitch: 1
+    rangePitch: 0
+    minPitch: 0.85
+    maxPitch: 1
+    mixer: {fileID: 6264963195427454884, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: SwordClash
+    clip: {fileID: 8300000, guid: 19c0703a6d06eab4fbca106df31f7410, type: 3}
+    volume: 0.04
+    pitch: 1
+    rangePitch: 0
+    minPitch: 0.85
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
+  - name: PageFlip
+    clip: {fileID: 8300000, guid: 3a102b015ce97174991393f87cfbee68, type: 3}
+    volume: 0.02
+    pitch: 1
+    rangePitch: 0
+    minPitch: 0.85
+    maxPitch: 1
+    mixer: {fileID: -6936227967443191769, guid: 29e343036d15aa0429ad09e219d60a46, type: 2}
+    loop: 0
+    source: {fileID: 0}
